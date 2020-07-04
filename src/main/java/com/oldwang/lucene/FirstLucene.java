@@ -9,6 +9,7 @@ import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.apache.lucene.analysis.tokenattributes.OffsetAttribute;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
+import org.apache.lucene.document.LongPoint;
 import org.apache.lucene.document.TextField;
 import org.apache.lucene.index.*;
 import org.apache.lucene.search.*;
@@ -60,7 +61,7 @@ public class FirstLucene {
             // 创建域对象
             Field nameFile = new TextField("fileName",name,Store.YES);
             Field pathFile = new TextField("filePath",path,Store.YES);
-            Field sizeFile = new TextField("fileSize",size+"",Store.YES);
+            Field sizeFile = new LongPoint("fileSize",size);
             Field contentFile = new TextField("fileContent",content,Store.YES);
 
             //添加域对象·
@@ -114,7 +115,7 @@ public class FirstLucene {
             String filePath = document.get("filePath");
             System.out.println(filePath);
             //文件大小
-            String fileSize = document.get("filePath");
+            String fileSize = document.get("fileSize");
             System.out.println(fileSize);
             System.out.println("-------------------");
         }
