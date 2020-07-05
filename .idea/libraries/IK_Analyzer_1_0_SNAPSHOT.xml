@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="IK-Analyzer-1.0-SNAPSHOT">
     <CLASSES>
-      <root url="jar://E:/Lucene/IK-Analyzer-1.0-SNAPSHOT.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/main/lib/IK-Analyzer-1.0-SNAPSHOT.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
